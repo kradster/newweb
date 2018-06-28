@@ -8,8 +8,9 @@
     <title>Document</title>
     <link rel="stylesheet" href="/css/style.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
     <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome-animation/0.1.0/font-awesome-animation.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.14/components/button.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.14/components/message.css">
@@ -148,7 +149,51 @@
             </div>
 
         </div>
-        <div class="col s9"></div>
+        <div class="col s9">
+            <center>
+                <fieldset>
+                    <legend>Account</legend>
+                    <form action="/account">
+                       <div class="row"> 
+                           <div class="input-field col s6">
+                            <input id="first_name" type="text" class="validate">
+                            <label for="first_name">First Name</label>
+                          </div>
+                          <div class="input-field col s6">
+                            <input id="last_name" type="text" class="validate">
+                            <label for="last_name">Last Name</label>
+                         </div>
+
+                           <div class="input-field col s6">
+                            <input id="address-line-1" type="text" class="validate">
+                            <label for="address-line-1"> Address Line 1</label>
+                          </div>
+                           <div class="input-field col s6">
+                            <input id="address-line-2" type="text" class="validate">
+                            <label for="address-line-2"> Address Line 2</label>
+                          </div>
+                          
+
+                           <div class="input-field col s6">
+                            <input id="city" type="text" class="validate">
+                            <label for="city">City</label>
+                          </div>
+                          <div class="input-field col s6">
+                            <input id="pincode" type="text" class="validate">
+                            <label for="pincode">Pincode</label>
+                          </div>
+                           <div class="input-field col s6">
+                            <input id="email" type="text" class="validate">
+                            <label for="email">Email</label>
+                          </div>
+                          <div class="input-field col s6">
+                            <input class="btn btn-large" type="submit" value="Update">
+                          </div>
+                        </div>
+                    </form>
+                </fieldset>
+            </center>
+        </div>
     </div>
     <!-- USER OPTIONS END -->
 
