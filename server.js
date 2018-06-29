@@ -37,6 +37,12 @@ app.post('/changepwd', (req, res) => {
     res.send(data);
 });
 
+app.post('/updatekyc', (req, res) => {
+    console.log(req.body);
+    data = req.body;
+    res.send(data);
+});
+
 app.get('*', (req, res) => {
     res.send('404 Page Not Found.');
 });
