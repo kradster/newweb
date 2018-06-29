@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.14/components/message.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.14/components/label.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-    
+
 </head>
 
 <body>
@@ -153,42 +153,42 @@
             <center>
                 <fieldset>
                     <legend>Account</legend>
-                    <form action="/account">
-                       <div class="row"> 
-                           <div class="input-field col s6">
-                            <input id="first_name" type="text" class="validate">
-                            <label for="first_name">First Name</label>
-                          </div>
-                          <div class="input-field col s6">
-                            <input id="last_name" type="text" class="validate">
-                            <label for="last_name">Last Name</label>
-                         </div>
+                    <form action="/account" method="post">
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <input id="first_name" name="first_name" type="text" class="validate">
+                                <label for="first_name">First Name</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <input id="last_name" name="last_name" type="text" class="validate">
+                                <label for="last_name">Last Name</label>
+                            </div>
 
-                           <div class="input-field col s6">
-                            <input id="address-line-1" type="text" class="validate">
-                            <label for="address-line-1"> Address Line 1</label>
-                          </div>
-                           <div class="input-field col s6">
-                            <input id="address-line-2" type="text" class="validate">
-                            <label for="address-line-2"> Address Line 2</label>
-                          </div>
-                          
+                            <div class="input-field col s6">
+                                <input id="address-line-1" name="address-line-1" type="text" class="validate">
+                                <label for="address-line-1"> Address Line 1</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <input id="address-line-2" name="address-line-2" type="text" class="validate">
+                                <label for="address-line-2"> Address Line 2</label>
+                            </div>
 
-                           <div class="input-field col s6">
-                            <input id="city" type="text" class="validate">
-                            <label for="city">City</label>
-                          </div>
-                          <div class="input-field col s6">
-                            <input id="pincode" type="text" class="validate">
-                            <label for="pincode">Pincode</label>
-                          </div>
-                           <div class="input-field col s6">
-                            <input id="email" type="text" class="validate">
-                            <label for="email">Email</label>
-                          </div>
-                          <div class="input-field col s6">
-                            <input class="btn btn-large" type="submit" value="Update">
-                          </div>
+
+                            <div class="input-field col s6">
+                                <input id="city" name="city" type="text" class="validate">
+                                <label for="city">City</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <input id="pincode" name="pincode" type="text" class="validate">
+                                <label for="pincode">Pincode</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <input id="email" type="text" class="validate">
+                                <label for="email">Email</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <input class="btn btn-large" type="submit" value="Update">
+                            </div>
                         </div>
                     </form>
                 </fieldset>
