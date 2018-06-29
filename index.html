@@ -15,6 +15,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.14/components/message.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.14/components/label.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <style>
+        .tabs-content.carousel.carousel-slider{
+            height:300px !important;
+        }
+    </style>
 </head>
 
 <body>
@@ -46,7 +51,7 @@
                         <a href="myaccount.html">MyAccount</a>
                     </li>
                     <li>
-                        <a href="logout.html">Logout</a>
+                        <a href="/usertemplate/dashboard.html">LogIn</a>
                     </li>
                     <li>
                         <a href="buy.html">Buy</a>
@@ -59,99 +64,231 @@
 
 
     <!-- HEADER START -->
-    <div class="row black" style="background:#fff url('/img/headerimg.jpg') center no-repeat;height:400px;">
-        <div class="container center white-text">
-            <div class="col s12" style="height:200px;"></div>
-            <h3>DASHBOARD</h3>
-            <div>Place your orders now to Buy D'Coin™!
-                <br> Be sure to update your KYC before Token distribution before the end of the ICO!</div>
+    <div class="row black" style="background:#fff url('/img/globe.jpeg') center no-repeat;height:100%;">
+        <div class="container white-text">
+            <div class="col s12" style="height:300px;"></div>
+            <h3><b>The worlds' first blockchain Crypto analysis for crypto traders</b></h3>
+            <h4>
+                    Power at your fingertips™ for beginners and professional traders in the crypto world
+            </h4>
+            <br><br>
+            <div class="row">
+                <a href="" class="btn amber" style="border-radius:50px;border:1px solid #fff">
+                    <b>Whitepaper</b>
+                </a>
+                <a href="" class="btn amber" style="border-radius:50px;border:1px solid #fff">
+                    <b>MVP/AVP</b>
+                </a>
+                <a href="" class="btn amber" style="border-radius:50px;border:1px solid #fff">
+                    <b>Legal Opinion</b>
+                </a>
+                <a href="" class="btn amber" style="border-radius:50px;border:1px solid #fff">
+                    <b>Techincal Whitepaper</b>
+                </a>
+            </div>
+            <div class="row">
+            <br><br>
+                <a href="" class="btn amber-text indigo darken-4 btn-large" style="border:1px solid #fff">
+                    <b>Join us on Facebook</b>
+                </a>
+            </div>
         </div>
     </div>
     <!-- HEADER END -->
-
-    <!-- USER OPTIONS START -->
-    <div class="row container">
-        <div class="col s3">
-
-            <div>
-                <h5>
-                    <b>Vinod Kradiya</b>
-                </h5>
-                <div>(
-                    <i class="fas fa-id-badge"></i> :DCOIN1234567 )</div>
-            </div>
-            <br>
-
-
-            <div>
-                <a href="/usertemplate/dashboard.html" class="ui label white large light-blue-text">
-
-                    DASHBOARD
-
-                </a><br>
-
-                <a href="/usertemplate/account.html" class="ui label white large grey-blue-text">
-
-                    ACCOUNT
-
-                </a>
-                <a href="/usertemplate/changepassword.html" class="ui label white large grey-blue-text">
-
-                    CHANGE PASSWORD
-
-                </a>
-
-                <a href="/usertemplate/updatekyc.html" class="ui label white large grey-blue-text">
-
-                    UPDATE KYC
-
-
-                </a>
-
-                <a href="/usertemplate/address.html" class="ui label white large grey-blue-text">
-
-                    ETHEREUM ADDRESS
-
-
-
-                </a>
-
-                <a href="/usertemplate/depositeAddress.html" class="ui label white large grey-blue-text">
-
-
-                    DESPOSITE ADDRESS
-
-
-                </a>
-
-                <a href="/usertemplate/2fa.html" class="ui label white large grey-blue-text">
-
-                    TWO FACTOR AUTHENTCATION
-
-
-                </a>
-
-                <a href="/usertemplate/orderhistory.html" class="ui label white large grey-blue-text">
-
-                    ORDER HISTORY
-
-
-                </a>
-
-                <a href="/usertemplate/referral.html" class="ui label white large grey-blue-text">
-
-                    REFERRAL
-
-
-                </a>
-            </div>
-
-        </div>
-        <div class="col s9"></div>
+    <div class="row center">
+        <h3>Lorem ipsum dolor sit amet consectetur.</h3>
+        <h5 class="col s10 offset-s1">D'Fintec™ is bringing together a revolutionary open API cryptocurrency platform named D'Crypt© to eliminate many existing complexities of trading in the real world though its in-house algorithm analysis of the complex world of crypto coins and exchanges, and narrowing it down in identifying the top best 10 to invest in. It takes out the brokers, the intermediary traders and middlemen and democratizes the usage of the platform on a blockchain and decentralizes the usage through smart contracts.</h5>
     </div>
-    <!-- USER OPTIONS END -->
+
+    <div class="row black" style="height:400px;">
+        <div class="container">
+            <br><br>
+            <div class="col s12">
+            <ul id="tabs-swipe-demo" class="tabs tabs-fixed-width black">
+                <li class="tab col s3"><a href="#test-swipe-1">Test 1</a></li>
+                <li class="tab col s3"><a class="active" href="#test-swipe-2">Test 2</a></li>
+                <li class="tab col s3"><a href="#test-swipe-3">Test 3</a></li>
+                <li class="tab col s3"><a href="#test-swipe-4">Test 4</a></li>
+                <li class="tab col s3"><a href="#test-swipe-5">Test 5</a></li>
+              </ul>
+                <div id="test-swipe-1" class="col s12 black">
+                    <center><br>
+                        <div class="card white col s10 offset-s1" style="border-radius:10px;">
+                            <div class="col s4">
+                                <h2 class="black-text">
+                                <b>CORPERATE VIDEO</b>
+                                </h2>
+                            </div>
+                            <div class="col s8" style="overflow: hidden;">
+                                <br>
+                                <img style="width:100%;" src="/img/globe.jpeg" alt="">
+                            </div>
+                        </div>
+                    </center>
+                </div>
+                <div id="test-swipe-2" class="col s12 black">
+                        <center><br>
+                            <div class="card white col s10 offset-s1" style="border-radius:10px;">
+                                <div class="col s4">
+                                    <h2 class="black-text">
+                                    <b>CORPERATE VIDEO</b>
+                                    </h2>
+                                </div>
+                                <div class="col s8" style="overflow: hidden;">
+                                    <br>
+                                    <img style="width:100%;" src="/img/globe.jpeg" alt="">
+                                </div>
+                            </div>
+                        </center>
+                </div>
+                <div id="test-swipe-3" class="col s12 black">
+                        <center><br>
+                            <div class="card white col s10 offset-s1" style="border-radius:10px;">
+                                <div class="col s4">
+                                    <h2 class="black-text">
+                                    <b>CORPERATE VIDEO</b>
+                                    </h2>
+                                </div>
+                                <div class="col s8" style="overflow: hidden;">
+                                    <br>
+                                    <img style="width:100%;" src="/img/globe.jpeg" alt="">
+                                </div>
+                            </div>
+                        </center>
+                </div>
+                <div id="test-swipe-4" class="col s12 black">
+                        <center><br>
+                            <div class="card white col s10 offset-s1" style="border-radius:10px;">
+                                <div class="col s4">
+                                    <h2 class="black-text">
+                                    <b>CORPERATE VIDEO</b>
+                                    </h2>
+                                </div>
+                                <div class="col s8" style="overflow: hidden;">
+                                    <br>
+                                    <img style="width:100%;" src="/img/globe.jpeg" alt="">
+                                </div>
+                            </div>
+                        </center>
+                </div>
+                <div id="test-swipe-5" class="col s12 black">
+                        <center><br>
+                            <div class="card white col s10 offset-s1" style="border-radius:10px;">
+                                <div class="col s4">
+                                    <h2 class="black-text">
+                                    <b>CORPERATE VIDEO</b>
+                                    </h2>
+                                </div>
+                                <div class="col s8" style="overflow: hidden;">
+                                    <br>
+                                    <img style="width:100%;" src="/img/globe.jpeg" alt="">
+                                </div>
+                            </div>
+                        </center>
+                </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="row blue darken-4" style="margin-top:-20px;">
+        <br><br><br>
+        <div class="container">
 
 
+            <blockquote class="col s6 amber white-text">
+                <h5 class="center-align">
+                    <b>PROBLEMS WITH TRADING</b>
+                </h5>
+                <br>
+                <br>
+                <div>
+                    <h6>COMPLEXITY</h6>
+                    <br> Millions of traders have the potential to earn on marginal trading with high leverage. Trading in this form allows
+                    for high yields, but with corresponding high risks involved. Different assets used for these transactions include
+                    currencies, cryptocurrencies, stock, index and commodity contracts for difference (CFDs) and other instruments.
+                    <br>
+                    <br>
+                </div>
+
+                <div>
+                    <h6>UNCERTAINTY</h6>
+                    <br> With the seemingly innumerable altcoins ICOs, exchanges and next generation blockchain forks in byzantine-like growth,
+                    how does one ensure fair transactions without breaking the bank? <br><br> </div>
+
+                <div>
+                    <h6>VULNERABILITY</h6><br> 
+                    A significant number of traders are not protected from fraud by intermediaries (such as brokers, dealers
+                    and even exchanges themselves). <br><br>
+                </div>
+                <div>
+                     <h6>OBSOLESCENCE</h6><br>
+                      In summary, traditional regulation of the market is ineffective, outdated, and cannot be relied upon to
+                    protect investments of retail clients. <br> Nevertheless, blockchain technology can solve these problems. That is why
+                    we created D'Crypt™. <br><br>
+                </div>
+                <br><br><br><br><br>
+            </blockquote>
+
+
+        <blockquote class="col s6 indigo darken-4 white-text">
+                <h5><b>SOLUTION - D'CRYPT (TM) PLATFORM</b></h5><br>
+
+                <div>
+                    <h6>SIMPLIFIED</h6><br>
+                
+                    We have created D'Crypt™— A blockchain platform that protects the interests of the individual clients of our trading community, taking away broker completely. You may choose from the best 3, 5, or 10 coins and exchanges for that day.
+                    <br><br>
+                </div>
+                <div>
+                   <h6> SAFE AND SECURE</h6><br>
+                
+                We ensure security for individual buyers’ and sellers’ funds by placing them on D'Crypt™ smart contracts based on the ERC-20 blockchain. <br><br>
+                </div>
+                <div>
+                   <h6> PEER-TO-PEER</h6><br>
+                
+                The contract is created and structured to ensure that funds transfer proceeds only by the mutual consent of the buyer and the seller directly removing the need of a broker. If a conflict occurs, D'Crypt™ can mediate in the transaction. <br><br>
+                </div>
+                <div>
+                   <h6> REDUCED RISK</h6><br>
+                
+                For the decision to be transparent and legitimate, D'Crypt™ will record digital signatures of buyer-seller interactions in the blockchain <br><br>
+                </div>
+                <div>
+                    <h6>WIDE RANGE OF TRADES</h6><br>
+                
+                Cryptocurrency buyers and sellers can invest in crypto assets and later, in traditional stocks and other financial instruments including Forex and commodities while keeping their accounts in nominated crypto currency and receiving profit in crypto currency. <br><br>
+                </div>
+            </blockquote>
+            </div>
+    </div>
+
+    <div class="row black white-text" style="margin-top:-20px;">
+        <br><br><br><br>
+            <div class="container">
+                <h4 class="center-align">THE D'CRYPT™ PLATFORM</h4><br><br>
+                <li>D'Crypt™ will be the leading crypto analytics platform of the crypto world.</li><br>
+                <li>D'Fintec’s goal is to provide a completely integrated platform that will provide and forecast the best 10 coins to be traded in</li><br>
+                <li> the best 10 exchanges and thereby making money for our D’Coin community as well as for the 200 million potential crypto users.</li><br>
+                <li>We will be providing D'Crypt™ as a mobile/tablet app and also on Windows, Mac and Linux via our web interface.</li><br>
+                <li>We will provide an API for our D'Crypt™ platform which will make it easy for coins and exchanges to integrate with it.</li><br>
+                
+            </div>
+            <center><img src="/img/dcrypt-diagram-artboard-2-1500px403x570.jpg" alt=""></center>
+    </div>
+
+
+<!-- Compiled and minified JavaScript -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+<script>
+  $(document).ready(function(){
+   M.AutoInit();
+   $('.tabs').tabs({
+       "swipeable":true
+   });
+ });
+</script>
 </body>
 
 </html>
