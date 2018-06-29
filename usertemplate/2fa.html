@@ -63,9 +63,8 @@
     <div class="row black" style="background:#fff url('/img/headerimg.jpg') center no-repeat;height:400px;">
         <div class="container center white-text">
             <div class="col s12" style="height:200px;"></div>
-            <h3>DASHBOARD</h3>
-            <div>Place your orders now to Buy D'Coin™!
-                <br> Be sure to update your KYC before Token distribution before the end of the ICO!</div>
+            <h3>TWO-FACTOR AUTHENTICATION</h3>
+            
         </div>
     </div>
     <!-- HEADER END -->
@@ -148,11 +147,24 @@
             </div>
 
         </div>
-        <div class="col s9"></div>
+        <div class="col s9">
+            <fieldset>
+                <legend>Two-Factor Authentication</legend>
+                <div class="input-field col s12">
+                    <a href="/2fa" class="btn btn-large amber">ENABLE 2FA</a>
+                </div>
+            </fieldset>
+        </div>
     </div>
     <!-- USER OPTIONS END -->
 
-
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+    <script>
+      $(document).ready(function(){
+       M.AutoInit();
+     });
+    </script>
 </body>
 
 </html>
