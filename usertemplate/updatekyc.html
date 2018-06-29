@@ -8,8 +8,9 @@
     <title>Document</title>
     <link rel="stylesheet" href="/css/style.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
     <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome-animation/0.1.0/font-awesome-animation.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.14/components/button.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.14/components/message.css">
@@ -148,11 +149,130 @@
             </div>
 
         </div>
-        <div class="col s9"></div>
+        <div class="col s9">
+            <center>
+                <fieldset>
+                    <legend>Account</legend>
+                    <form action="/account">
+                       <div class="row"> 
+                            <div class="input-field col s6">
+                                <input id="first_name" type="text" class="validate">
+                                <label for="first_name">First Name</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <input id="last_name" type="text" class="validate">
+                                <label for="last_name">Last Name</label>
+                            </div>
+                            <div class="input-field">
+                                <p class="left-align grey-text col s2" style="padding:0px;">&nbsp;&nbsp; Gender</p>
+                                <p class="col s1">
+                                    <label>
+                                        <input name="sex" value="male" type="radio" checked />
+                                        <span>Male</span>
+                                    </label>
+                                </p>
+
+                                <p class="col s3">
+                                    <label>
+                                        <input name="sex" value="female" type="radio" />
+                                        <span>Female</span>
+                                    </label>
+                                </p>
+                            </div>
+                            <div class="input-field col s12">
+                                <input type="text" name="address" id="address">
+                                <label for="address">Address</label>
+                            </div>
+                            <div class="input-field col s12">
+                                <input type="text" name="Apartment" id="Apartment">
+                                <label for="Apartment">Apartment, Unit, Building, Floor</label>
+                            </div>
+                            <div class="input-field col s12">
+                                <input type="text" name="Landmark" id="Landmark">
+                                <label for="Landmark">Landmark</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <input type="text" name="City " id="City ">
+                                <label for="City ">City </label>
+                            </div>
+                            <div class="input-field col s6">
+                                <input type="text" name="State" id="State">
+                                <label for="State">State/Province/Region</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <input type="text" name=" ZIP" id=" ZIP">
+                                <label for=" ZIP"> ZIP/Postal Code</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <input type="text" name="MobileNumber" id="MobileNumber">
+                                <label for="MobileNumber">Mobile Number</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <input type="text" class="datepicker" name="dob" id="dob">
+                                <label for="dob">Date of Birth</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <input type="text" name="Landmark" id="Landmark">
+                                <label for="Landmark">Address</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <input type="text" name="Landmark" id="Landmark">
+                                <label for="Landmark">Address</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <input type="text" name="Landmark" id="Landmark">
+                                <label for="Landmark">Address</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <input type="text" name="Landmark" id="Landmark">
+                                <label for="Landmark">Address</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <input type="text" name="Landmark" id="Landmark">
+                                <label for="Landmark">Address</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <input type="text" name="Landmark" id="Landmark">
+                                <label for="Landmark">Address</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <input type="text" name="Landmark" id="Landmark">
+                                <label for="Landmark">Address</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <input type="text" name="Landmark" id="Landmark">
+                                <label for="Landmark">Address</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <input type="text" name="Landmark" id="Landmark">
+                                <label for="Landmark">Address</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <input type="text" name="Landmark" id="Landmark">
+                                <label for="Landmark">Address</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <input type="text" name="Landmark" id="Landmark">
+                                <label for="Landmark">Address</label>
+                            </div>
+                            
+                         </div>
+                    </form>
+                </fieldset>
+            </center>
+        </div>
     </div>
     <!-- USER OPTIONS END -->
 
-
+ <!-- Compiled and minified JavaScript -->
+ <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script>
+   document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.datepicker');
+    var instances = M.Datepicker.init(elems, options);
+  });
+</script>
 </body>
 
 </html>
