@@ -10,13 +10,11 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
     <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
-    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome-animation/0.1.0/font-awesome-animation.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.14/components/button.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.14/components/message.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.14/components/label.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-   
 </head>
 
 <body>
@@ -61,12 +59,16 @@
 
 
     <!-- HEADER START -->
-    <div class="row black" style="background:#fff url('/img/headerimg.jpg') center no-repeat;height:400px;">
+    <div class="row black" style="background:#fff url('/img/headerimg.jpg') center no-repeat;height:440px;">
         <div class="container center white-text">
             <div class="col s12" style="height:200px;"></div>
-            <h3>DASHBOARD</h3>
-            <div>Place your orders now to Buy D'Coin™!
-                <br> Be sure to update your KYC before Token distribution before the end of the ICO!</div>
+            <h3>UPDATE KYC</h3>
+            <div>
+                    JOIN THE D’COIN TOKEN SALE <br><br>
+
+                    Know your customer (“KYC”) / Anti-money Laundering (“AML”) is the process being done by a third-party company called Sum & Substance , a business identifying and verifying the identity of clients, and it features on the AML lists. It is vital for D’Coin™ to comply with the regulations of Singapore and also by various financial institutions in order to build a successful company. Please take a look at our token sale terms and conditions as well.
+                    <br>
+                </div>
         </div>
     </div>
     <!-- HEADER END -->
@@ -212,48 +214,123 @@
                                 <label for="dob">Date of Birth</label>
                             </div>
                             <div class="input-field col s6">
-                                <input type="text" name="Landmark" id="Landmark">
-                                <label for="Landmark">Address</label>
+                                <input type="text" name="IDNumber" id="IDNumber">
+                                <label for="IDNumber">ID Number</label>
                             </div>
                             <div class="input-field col s6">
-                                <input type="text" name="Landmark" id="Landmark">
-                                <label for="Landmark">Address</label>
+                                <input type="text" class="datepicker" name="IDIssueDate" id="IDIssueDate">
+                                <label for="IDIssueDate">ID Issue Date</label>
                             </div>
                             <div class="input-field col s6">
-                                <input type="text" name="Landmark" id="Landmark">
-                                <label for="Landmark">Address</label>
+                                <input type="text" class="datepicker" name="IDExpirationDate" id="IDExpirationDate">
+                                <label for="IDExpirationDate">ID Expiration Date</label>
                             </div>
                             <div class="input-field col s6">
-                                <input type="text" name="Landmark" id="Landmark">
-                                <label for="Landmark">Address</label>
+                                <input type="text" name="AccountNumber" id="AccountNumber">
+                                <label for="AccountNumber">Account Number</label>
                             </div>
                             <div class="input-field col s6">
-                                <input type="text" name="Landmark" id="Landmark">
-                                <label for="Landmark">Address</label>
+                                <input type="text" name="BankName" id="BankName">
+                                <label for="BankName">Bank Name</label>
                             </div>
                             <div class="input-field col s6">
-                                <input type="text" name="Landmark" id="Landmark">
-                                <label for="Landmark">Address</label>
+                                <input type="text" name="SWIFTIBAN" id="SWIFTIBAN">
+                                <label for="SWIFTIBAN">SWIFT/IBAN</label>
                             </div>
                             <div class="input-field col s6">
-                                <input type="text" name="Landmark" id="Landmark">
-                                <label for="Landmark">Address</label>
+                                <input type="text" name="BeneficiaryName" id="BeneficiaryName">
+                                <label for="BeneficiaryName">Beneficiary Name</label>
                             </div>
                             <div class="input-field col s6">
-                                <input type="text" name="Landmark" id="Landmark">
-                                <label for="Landmark">Address</label>
+                                <select name="AccountType">
+                                    <option value="" disabled selected>Select Account Type</option>
+                                    <option value="Current">Current</option>
+                                    <option value="Saving">Saving</option>
+                                  </select>
                             </div>
                             <div class="input-field col s6">
-                                <input type="text" name="Landmark" id="Landmark">
-                                <label for="Landmark">Address</label>
+                                <input type="text" name="Remark" id="Remark">
+                                <label for="Remark">Remark</label>
                             </div>
                             <div class="input-field col s6">
-                                <input type="text" name="Landmark" id="Landmark">
-                                <label for="Landmark">Address</label>
+                                <select name="IdType">
+                                    <option value="" disabled selected>Select Vaild ID</option>
+                                    <option value="AdharCard">Adhar Card</option>
+                                    <option value="PanCard">Pan Card</option>
+                                    <option value="DrivingLic">Driving License</option>
+                                  </select>
                             </div>
                             <div class="input-field col s6">
-                                <input type="text" name="Landmark" id="Landmark">
-                                <label for="Landmark">Address</label>
+                                <select name="AddressProfType">
+                                    <option value="" disabled selected="selected">Select Valid Proof of Address</option>
+                                    <option value="UTILITY_BILL">Utility Bill(addressed to you)</option>
+                                    <option value="ID_CARD">Govt ID Card/Aadhaar Card (with current address)</option>
+                                    <option value="BANK_CARD">Bank Statement (with current address)</option>
+                                    <option value="OTHER">Any Other</option>
+                                </select>
+                            </div>
+                            <div class="input-field col s6">
+                                <div class="file-field input-field">
+                                    <div class="btn">
+                                      <span>PROOF OF IDENTITY</span>
+                                      <input type="file" name="ProofofId">
+                                    </div>
+                                    <div class="file-path-wrapper">
+                                      <input class="file-path validate" type="text">
+                                    </div>
+                                  </div>
+                                  <small>
+                                        Supported file format PNG and JPG Only. 
+                                        File size must be less than 1MB.
+                                  </small>
+                            </div>
+                            <div class="input-field col s6">
+                                <div class="file-field input-field">
+                                    
+                                    <div class="btn">
+                                      <span>PROOF OF ADDRESS</span>
+                                      <input type="file" name="ProofofAddress">
+                                    </div>
+                                    <div class="file-path-wrapper">
+                                      <input class="file-path validate" type="text">
+                                    </div>
+                                  </div>
+                                  <small>
+                                        Supported file format PNG and JPG Only. 
+                                        File size must be less than 1MB.
+                                  </small>
+                            </div>
+                            <div class="input-field col s6">
+                                <div class="file-field input-field">
+                                    <div class="btn">
+                                      <span>PROOF OF SELFIE</span>
+                                      <input type="file" name="ProofofSelfie">
+                                    </div>
+                                    <div class="file-path-wrapper">
+                                      <input class="file-path validate" type="text">
+                                    </div>
+                                  </div>
+                                  <small>
+                                        Supported file format PNG and JPG Only. 
+                                        File size must be less than 1MB.
+                                  </small>
+                            </div>
+                            <div class="input-field col s12">
+                                <div><b>Declration</b></div><br>
+                                <div class="col s2">
+                                        <p>
+                                                <label>
+                                                  <input type="checkbox" class="filled-in" name="DeclrationAccept" />
+                                                  <span></span>
+                                                </label>
+                                              </p>
+                                </div>
+                                <div class="col s10">
+                                    <small>I agree with the Terms and Conditions as started in the document right above this checkbox. I also hereby solemnly declare that the information provided is up-to-date and correct. I authorize D’Fintec™ Global Pte Ltd to verify the information provided to confirm its accuracy.</small>
+                                </div>
+                            </div>
+                            <div class="input-field col s6">
+                                <input class="btn btn-large" type="submit" value="UPDATE KYC">
                             </div>
                             
                          </div>
@@ -265,12 +342,11 @@
     <!-- USER OPTIONS END -->
 
  <!-- Compiled and minified JavaScript -->
+ <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
-<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script>
-   document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.datepicker');
-    var instances = M.Datepicker.init(elems, options);
+   $(document).ready(function(){
+    M.AutoInit();
   });
 </script>
 </body>

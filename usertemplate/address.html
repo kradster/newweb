@@ -63,9 +63,8 @@
     <div class="row black" style="background:#fff url('/img/headerimg.jpg') center no-repeat;height:400px;">
         <div class="container center white-text">
             <div class="col s12" style="height:200px;"></div>
-            <h3>DASHBOARD</h3>
-            <div>Place your orders now to Buy D'Coin™!
-                <br> Be sure to update your KYC before Token distribution before the end of the ICO!</div>
+            <h3>ETHEREUM ADDRESS</h3>
+            
         </div>
     </div>
     <!-- HEADER END -->
@@ -148,11 +147,34 @@
             </div>
 
         </div>
-        <div class="col s9"></div>
+        <div class="col s9">
+            <fieldset>
+                <legend>Your Ethereum Address</legend>
+                <form action="/eth">
+                    <div class="input-field col s12">
+                        <input type="text" name="ethAdd" id="ethAdd">
+                        <label for="ethAdd">Ethereum Address</label>
+                    </div>
+                    <div>
+                            Note: Please make sure to have a valid ERC20 compatible Ethereum address to receive your tokens. DO NOT send ETH directly from any exchange addresses! Use MyEtherWallet, MetaMask, Mist, Parity or other compatible wallets.
+                    </div>
+                    <div class="input-field col s12">
+                        <input type="submit" value="Save Address" class="btn btn-large">
+                    </div>
+                </form>
+            </fieldset>
+        </div>
     </div>
     <!-- USER OPTIONS END -->
 
-
+<!-- Compiled and minified JavaScript -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+<script>
+  $(document).ready(function(){
+   M.AutoInit();
+ });
+</script>
 </body>
 
 </html>
