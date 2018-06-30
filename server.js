@@ -97,7 +97,6 @@ app.post('/register', (req, res) => {
     data = req.body;
     if (data.password !== data.cpassword) return res.send({ error: "Passwords dont match" });
     delete data.cpassword;
-    data.email = 'ajd';
     sql = "INSERT INTO Users(contact_id, first_name, last_name, email, password, referral) VALUES(" + Date.now() + ",'" + Object.values(data).join("', '") + "');";
     //console.log(sql);
     db.exec(sql, err => {
@@ -111,17 +110,16 @@ app.post('/register', (req, res) => {
 app.post('/login', (req, res) => {
     data = req.body;
     console.log(data);
-    //sql = "SELECT first_name, last_name, email, referral, contact_id FROM Users WHERE email = '" + data.email + "' AND password = '" + data.password + "'";
-    sql2 = "SELECT first_name, last_name, email, referral, contact_id FROM Users WHERE email = 'dummycontent@gmail.com' AND password = '1234'";
-    //console.log(sql2);
-    db.get(sql2, (err, row) => {
+
+    db.get("SELECT first_name, last_name, email, referral, contact_id FROM Users WHERE email = ? AND password = ?", data.email, data.password, (err, row) => {
         console.log("function trigger");
         if (!row) {
             console.log("0 rows found");
             return res.send('Error2');
         }
         console.log(row);
-        return res.send('test');
+        res.cookie('userdata', row);
+        return res.redirect('/usertemplate/dashboard.html');
     });
     //res.send(req.body);
 
