@@ -41,13 +41,13 @@
                         <a href="timeline.html">Timeline</a>
                     </li>
                     <li>
-                        <a href="faq.html">Faq</a>
+                        <a href="faq.html">FAQ</a>
                     </li>
                     <li>
-                        <a href="myaccount.html">MyAccount</a>
+                        <a href="login.html">Login</a>
                     </li>
                     <li>
-                        <a href="logout.html">Logout</a>
+                        <a href="register.html">Registration</a>
                     </li>
                     <li>
                         <a href="buy.html">Buy</a>
@@ -63,96 +63,70 @@
     <div class="row black" style="background:#fff url('/img/headerimg.jpg') center no-repeat;height:400px;">
         <div class="container center white-text">
             <div class="col s12" style="height:200px;"></div>
-            <h3>TWO-FACTOR AUTHENTICATION</h3>
+            <h3>REGISTRATION</h3>
             
         </div>
     </div>
     <!-- HEADER END -->
 
     <!-- USER OPTIONS START -->
-    <div class="row container">
-        <div class="col s3">
-
-            <div>
-                <h5>
-                    <b>Vinod Kradiya</b>
-                </h5>
-                <div>(
-                    <i class="fas fa-id-badge"></i> :DCOIN1234567 )</div>
-            </div>
-            <br>
-
-
-            <div>
-                <a href="/usertemplate/dashboard.html" class="ui label white large grey-blue-text">
-
-                    DASHBOARD
-
-                </a><br>
-
-                <a href="/usertemplate/account.html" class="ui label white large grey-blue-text">
-
-                    ACCOUNT
-
-                </a>
-                <a href="/usertemplate/changepassword.html" class="ui label white large grey-blue-text">
-
-                    CHANGE PASSWORD
-
-                </a>
-
-                <a href="/usertemplate/updatekyc.html" class="ui label white large grey-blue-text">
-
-                    UPDATE KYC
-
-
-                </a>
-
-                <a href="/usertemplate/address.html" class="ui label white large grey-blue-text">
-
-                    ETHEREUM ADDRESS
-
-
-
-                </a>
-
-                <a href="/usertemplate/depositeAddress.html" class="ui label white large grey-blue-text">
-
-
-                    DESPOSITE ADDRESS
-
-
-                </a>
-
-                <a href="/usertemplate/2fa.html" class="ui label white large light-blue-text">
-
-                    TWO FACTOR AUTHENTCATION
-
-
-                </a>
-
-                <a href="/usertemplate/orderhistory.html" class="ui label white large grey-blue-text">
-
-                    ORDER HISTORY
-
-
-                </a>
-
-                <a href="/usertemplate/referral.html" class="ui label white large grey-blue-text">
-
-                    REFERRAL
-
-
-                </a>
-            </div>
-
-        </div>
-        <div class="col s9">
+    <div class="row">
+        <div class="container">
             <fieldset>
-                <legend>Two-Factor Authentication</legend>
-                <div class="input-field col s12">
-                    <a href="/2fa" class="btn btn-large amber">ENABLE 2FA</a>
-                </div>
+                <legend>Registration</legend>
+                <form action="/register">
+                    <div class="input-field col s6">
+                        <input type="text" name="fname">
+                        <label for="fname">First Name</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input type="text" name="lname">
+                        <label for="lname">Last Name</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <input type="text" name="email">
+                        <label for="email">Email</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <input type="text" name="password">
+                        <label for="password">Password</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <input type="text" name="cpassword">
+                        <label for="cpassword">Confirm Password</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <input type="text" name="referral">
+                        <label for="referral">Referral</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <p>
+                            <label>
+                                <input type="checkbox" class="filled-in"  />
+                                <span><small>I have read and agree to the TERMS AND CONDITIONS OF D'COIN™ TOKEN ICO</small></span>
+                            </label>
+                        </p>
+                    </div>
+                    <div class="input-field col s12">
+                        <p>
+                            <label>
+                                <input type="checkbox" class="filled-in"  />
+                                <span><small>I understand and agree that I must use a valid ERC-20 Ethereum-compatible wallet address, such as MyEtherWallet or MetaMask.</small></span>
+                            </label>
+                        </p>
+                    </div>
+                    <div class="input-field col s12">
+                        <p>
+                            <label>
+                                <input type="checkbox" class="filled-in"  />
+                                <span><small>I am press, please send me the D'Coin™ Press Kit.</small></span>
+                            </label>
+                        </p>
+                    </div>
+                    <div class="input-field col s12">
+                       <input type="submit" value="Register" class="btn btn-large">
+                    </div>
+                </form>
             </fieldset>
         </div>
     </div>
@@ -163,6 +137,7 @@
     <script>
       $(document).ready(function(){
        M.AutoInit();
+       
      });
     </script>
 </body>
