@@ -5,7 +5,7 @@ let bodyParser = require('body-parser');
 let multer = require('multer');
 let upload = multer();
 
-let passport = require('passport');
+let bcrypt = require('bcrypt-nodejs');
 
 //for parsing application/xwww
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -35,31 +35,14 @@ let db = new sqlite3.Database('database.db', err => {
             last_name text NOT NULL,
             email varchar(100) NOT NULL,    
             password text NOT NULL,
-            referral text
+            referral text,
+            address_line_1 text,
+            address_line_2 text,
+            city text,
+            pincode text
         );
     `);
 });
-
-// passport.use(new LocalStrategy((username, password, done) => {
-//     db.get('SELECT password FROM users WHERE username = ?', username, (err, row) => {
-//         if (!row) return done(null, false);
-//         db.get('SELECT username, id FROM users WHERE username = ? AND password =? ', username, password, (err, row) => {
-//             if (!row) return done(null, false);
-//             return done(null, row);
-//         })
-//     });
-// }));
-
-// passport.serializeUser((user, done) => {
-//     return done(null, user.id);
-// });
-
-// passport.deserializeUser((id, done) => {
-//     db.get('SELECT id, username FROM users WHERE id = ?', id, (err, row) => {
-//         if (!row) return done(null, false);
-//         return done(null, row);
-//     });
-// });
 
 app.listen(process.env.PORT || 3000, () => {
     console.log('listening on : ' + (process.env.PORT || 3000));
@@ -69,17 +52,32 @@ app.get('/', (req, res) => {
     res.sendFile('index.html', { root: __dirname });
 });
 
-
+app.get('/usertemplate/logout.html', (req, res) => {
+    res.cookie('first_name', '', 0);
+    res.cookie('last_name', '', 0);
+    res.cookie('email', '', 0);
+    res.cookie('referral', '', 0);
+    res.cookie('contact_id', '', 0);
+    res.cookie('hash', '', 0);
+    res.redirect('/');
+});
 
 app.post('/account', (req, res) => {
     console.log(req.body);
+    console.log(req.cookies);
+
+    // db.get("SELECT address_line_1, address_line_2, pincode, city FROM Users WHERE email = ? AND password = ?", data.email, bcrypt.hashSync(data.password), (err, row) => {
+    //     //console.log("function trigger");
+    //     if (!row) {
+    //         console.log("0 rows found");
+    //         return res.send('Error, No such user exists');
+    //     }
+    // });
     data = req.body;
-    db.exec(`
-    INSERT INTO Users(first_name, last_name, email, password, )
-    VALUES(` + Object.values(data).join(",") + `);
-    `);
+
     res.send(data);
 });
+
 
 app.post('/changepwd', (req, res) => {
     console.log(req.body);
@@ -97,11 +95,11 @@ app.post('/register', (req, res) => {
     data = req.body;
     if (data.password !== data.cpassword) return res.send({ error: "Passwords dont match" });
     delete data.cpassword;
+    data.password = bcrypt.hashSync(data.password);
     sql = "INSERT INTO Users(contact_id, first_name, last_name, email, password, referral) VALUES(" + Date.now() + ",'" + Object.values(data).join("', '") + "');";
     //console.log(sql);
     db.exec(sql, err => {
         if (err) return res.send(err);
-        res.cookie('userid', data.first_name + data.email);
         return res.redirect('/usertemplate/account.html');
     });
     //res.redirect('/');
@@ -109,21 +107,31 @@ app.post('/register', (req, res) => {
 
 app.post('/login', (req, res) => {
     data = req.body;
-    console.log(data);
-
-    db.get("SELECT first_name, last_name, email, referral, contact_id FROM Users WHERE email = ? AND password = ?", data.email, data.password, (err, row) => {
-        console.log("function trigger");
+    //console.log("Logged in", data);
+    db.get("SELECT first_name, last_name, email, password, referral, contact_id, address_line_1, address_line_2, city, pincode FROM Users WHERE email = ?", data.email, (err, row) => {
+        //console.log("function trigger");
         if (!row) {
             console.log("0 rows found");
-            return res.send('Error2');
+            return res.send('Error, No such user exists');
         }
-        console.log(row);
-        res.cookie('userdata', row);
+        //console.log(row);
+        if (!bcrypt.compareSync(data.password, row.password)) return res.send("Err  or, Incorrect password.");
+        e = { expires: new Date(Date.now() + 1000 * 60 * 24) };
+        console.log('Logged in', row);
+
+        res = setCookies(res, row, e);
         return res.redirect('/usertemplate/dashboard.html');
     });
     //res.send(req.body);
 
 });
+
+function setCookies(res, row, expiry = 0) {
+    for (let key in row)
+        if (row[key]) res.cookie(key, row[key], expiry);
+        else res.cookie(key, "", expiry);
+    return res;
+}
 
 app.get('*', (req, res) => {
     res.send('404 Page Not Found.');
